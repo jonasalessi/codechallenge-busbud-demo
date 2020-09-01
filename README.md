@@ -1,6 +1,8 @@
 ## Busbud Challenge Demonstration
 This project was created to demonstrate the API that provides autocomplete functionality for suggestions to the cities in the USA and Canada.
 
+Access the demo [here.](https://jonasalessi.github.io/codechallenge-busbud-demo/) 
+
 The backend implementation can be found at https://github.com/jonasalessi/coding-challenge-backend-c
 
 ## Setting up the project

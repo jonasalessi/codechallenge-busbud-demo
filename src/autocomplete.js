@@ -18,7 +18,7 @@ export const register = () => {
       setMessage('Searching...');
 
       fetch(
-        `http://gentle-island-08430.herokuapp.com/suggestions?q=${query}${locations}`
+        `https://gentle-island-08430.herokuapp.com/suggestions?q=${query}${locations}`
       )
         .then((response) => response.json())
         .then((body) => {
