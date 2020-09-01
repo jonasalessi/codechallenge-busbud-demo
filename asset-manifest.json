@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/codechallenge-busbud-demo/static/css/main.4a69ca62.chunk.css",
-    "main.js": "/codechallenge-busbud-demo/static/js/main.4c01ac51.chunk.js",
-    "main.js.map": "/codechallenge-busbud-demo/static/js/main.4c01ac51.chunk.js.map",
+    "main.js": "/codechallenge-busbud-demo/static/js/main.e7ee76b6.chunk.js",
+    "main.js.map": "/codechallenge-busbud-demo/static/js/main.e7ee76b6.chunk.js.map",
     "runtime-main.js": "/codechallenge-busbud-demo/static/js/runtime-main.3e73f591.js",
     "runtime-main.js.map": "/codechallenge-busbud-demo/static/js/runtime-main.3e73f591.js.map",
     "static/js/2.b445b8e5.chunk.js": "/codechallenge-busbud-demo/static/js/2.b445b8e5.chunk.js",
     "static/js/2.b445b8e5.chunk.js.map": "/codechallenge-busbud-demo/static/js/2.b445b8e5.chunk.js.map",
     "index.html": "/codechallenge-busbud-demo/index.html",
-    "precache-manifest.b91198107d01238086808768953a998a.js": "/codechallenge-busbud-demo/precache-manifest.b91198107d01238086808768953a998a.js",
+    "precache-manifest.143af6b91d37e25e6a04047f9de759e4.js": "/codechallenge-busbud-demo/precache-manifest.143af6b91d37e25e6a04047f9de759e4.js",
     "service-worker.js": "/codechallenge-busbud-demo/service-worker.js",
     "static/css/main.4a69ca62.chunk.css.map": "/codechallenge-busbud-demo/static/css/main.4a69ca62.chunk.css.map",
     "static/js/2.b445b8e5.chunk.js.LICENSE.txt": "/codechallenge-busbud-demo/static/js/2.b445b8e5.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.3e73f591.js",
     "static/js/2.b445b8e5.chunk.js",
     "static/css/main.4a69ca62.chunk.css",
-    "static/js/main.4c01ac51.chunk.js"
+    "static/js/main.e7ee76b6.chunk.js"
   ]
 }

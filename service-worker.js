@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/codechallenge-busbud-demo/precache-manifest.b91198107d01238086808768953a998a.js"
+  "/codechallenge-busbud-demo/precache-manifest.143af6b91d37e25e6a04047f9de759e4.js"
 );
 
 self.addEventListener('message', (event) => {
