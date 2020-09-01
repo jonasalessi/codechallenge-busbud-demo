@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/codechallenge-busbud-demo/static/css/main.4a69ca62.chunk.css",
-    "main.js": "/codechallenge-busbud-demo/static/js/main.e7ee76b6.chunk.js",
-    "main.js.map": "/codechallenge-busbud-demo/static/js/main.e7ee76b6.chunk.js.map",
+    "main.css": "/codechallenge-busbud-demo/static/css/main.51015dde.chunk.css",
+    "main.js": "/codechallenge-busbud-demo/static/js/main.27bb97cf.chunk.js",
+    "main.js.map": "/codechallenge-busbud-demo/static/js/main.27bb97cf.chunk.js.map",
     "runtime-main.js": "/codechallenge-busbud-demo/static/js/runtime-main.3e73f591.js",
     "runtime-main.js.map": "/codechallenge-busbud-demo/static/js/runtime-main.3e73f591.js.map",
-    "static/js/2.b445b8e5.chunk.js": "/codechallenge-busbud-demo/static/js/2.b445b8e5.chunk.js",
-    "static/js/2.b445b8e5.chunk.js.map": "/codechallenge-busbud-demo/static/js/2.b445b8e5.chunk.js.map",
+    "static/js/2.d2c02972.chunk.js": "/codechallenge-busbud-demo/static/js/2.d2c02972.chunk.js",
+    "static/js/2.d2c02972.chunk.js.map": "/codechallenge-busbud-demo/static/js/2.d2c02972.chunk.js.map",
     "index.html": "/codechallenge-busbud-demo/index.html",
-    "precache-manifest.6d68413e6086666e904ba182110917de.js": "/codechallenge-busbud-demo/precache-manifest.6d68413e6086666e904ba182110917de.js",
+    "precache-manifest.082c7b3bdd58d77d70c27f3fa008bebc.js": "/codechallenge-busbud-demo/precache-manifest.082c7b3bdd58d77d70c27f3fa008bebc.js",
     "service-worker.js": "/codechallenge-busbud-demo/service-worker.js",
-    "static/css/main.4a69ca62.chunk.css.map": "/codechallenge-busbud-demo/static/css/main.4a69ca62.chunk.css.map",
-    "static/js/2.b445b8e5.chunk.js.LICENSE.txt": "/codechallenge-busbud-demo/static/js/2.b445b8e5.chunk.js.LICENSE.txt",
+    "static/css/main.51015dde.chunk.css.map": "/codechallenge-busbud-demo/static/css/main.51015dde.chunk.css.map",
+    "static/js/2.d2c02972.chunk.js.LICENSE.txt": "/codechallenge-busbud-demo/static/js/2.d2c02972.chunk.js.LICENSE.txt",
     "static/media/logo.png": "/codechallenge-busbud-demo/static/media/logo.8131def6.png"
   },
   "entrypoints": [
     "static/js/runtime-main.3e73f591.js",
-    "static/js/2.b445b8e5.chunk.js",
-    "static/css/main.4a69ca62.chunk.css",
-    "static/js/main.e7ee76b6.chunk.js"
+    "static/js/2.d2c02972.chunk.js",
+    "static/css/main.51015dde.chunk.css",
+    "static/js/main.27bb97cf.chunk.js"
   ]
 }
