@@ -43,7 +43,7 @@ const App = () => {
   };
 
   const openMaps = (city) => {
-    window.open(`https://www.google.com.br/maps/@${city.latitude},${city.longitude},15z`);
+    window.open(`https://www.google.com/maps/search/?api=1&query=${city.latitude},${city.longitude}`);
   }
 
   return (
