@@ -1,31 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import {register} from './autocomplete';
+import { register } from './autocomplete';
+
+const Average = ({ calls }) =>
+  (<div className="average">
+    Average response time {calls.sum > 0 ? Number(calls.sum / calls.times).toFixed(2) : '0'} m/s
+  </div>);
 
 const App = () => {
-  const [calls, setCalls] = useState({times:0, sum: 0});
+  const [calls, setCalls] = useState({ times: 0, sum: 0 });
   const [query, setQuery] = useState('');
   const [message, setMessage] = useState('');
   const [location, setLocation] = useState({ latitude: '', longitude: '' });
   const [suggestions, setSuggestions] = useState(null);
   const [autocompleteSearchDebounced, autocompleteSearchThrottled] = register();
-  
+
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
-      setLocation({ 
+      setLocation({
         longitude: position.coords.longitude,
         latitude: position.coords.latitude,
       });
     });
   }, []);
 
-  const getAverages = () => 
-     (<div className="average">
-      Average {calls.sum > 0 ? Number(calls.sum / calls.times).toFixed(2) : '0'} m/s
-    </div>);
-  
-  const changeLocation = (typestr) => (event) => {
-    setLocation({ ...location, [typestr]: event.target.value });
+  const changeLocation = (field) => (event) => {
+    setLocation({ ...location, [field]: event.target.value });
   };
 
   const changeQuery = (event) => {
@@ -36,63 +36,66 @@ const App = () => {
       return;
     }
     if (event.target.value.length < 5) {
-      autocompleteSearchThrottled({query:event.target.value, calls, location, setSuggestions, setCalls, setMessage});
+      autocompleteSearchThrottled({ query: event.target.value, calls, location, setSuggestions, setCalls, setMessage });
     } else {
-      autocompleteSearchDebounced({query:event.target.value, calls, location, setSuggestions, setCalls, setMessage});
+      autocompleteSearchDebounced({ query: event.target.value, calls, location, setSuggestions, setCalls, setMessage });
     }
   };
 
+  const openMaps = (city) => {
+    window.open(`https://www.google.com.br/maps/@${city.latitude},${city.longitude},15z`);
+  }
+
   return (
     <div className="center">
-    {getAverages()}
-    <div className="App-container">
-      <img
-        className="App-logo"
-        src={require('./logo.png')}
-        alt="Logo challenge Jonas"
+      <Average calls={calls} />
+      <div className="App-container">
+        <img
+          className="App-logo"
+          src={require('./logo.png')}
+          alt="Logo challenge Jonas"
         />
-      <div className="App-input-container">
- 
-      <input
-       className="App-input-search"
-        placeholder="Type something here"
-        type="text"
-        value={query}
-        onChange={changeQuery}
-        />
+        <div className="App-input-container">
+          <input
+            className="App-input-search"
+            placeholder="Type some city here"
+            type="text"
+            value={query}
+            onChange={changeQuery}
+          />
 
-      <input
-        className="App-input-lat"
-        placeholder="Latitude"
-        type="text"
-        value={location.latitude}
-        onChange={changeLocation('latitude')}
-        />
-      <input
-        className="App-input-long"
-        placeholder="Longitude"
-        type="text"
-        value={location.longitude}
-        onChange={changeLocation('longitude')}
-        />
+          <input
+            className="App-input-lat"
+            placeholder="Latitude"
+            type="text"
+            value={location.latitude}
+            onChange={changeLocation('latitude')}
+          />
+          <input
+            className="App-input-long"
+            placeholder="Longitude"
+            type="text"
+            value={location.longitude}
+            onChange={changeLocation('longitude')}
+          />
         </div>
-      {suggestions?.length  ? 
-      <ol>
-        {suggestions.map((s, i) => {
-          return (
-            <>
-            <li key={s + i}>
-              {s.name}
-              <span className="similarity">{Number(s.score * 100).toFixed(2)} % similarity</span>
-            </li>
-            <hr />
-            </>
-          );
-        })}
-      </ol>
-      : message}
+        {suggestions?.length ?
+          <ol>
+            {suggestions.map((s, i) => {
+              return (
+                <>
+                  <li key={s + i} onClick={() => openMaps(s)}>
+                    {s.name}
+                    <span className="similarity">{Number(s.score * 100).toFixed(2)} % similarity</span>
+                  </li>
+                  <hr />
+                </>
+              );
+            })}
+          </ol>
+          : (<div className="message" >{message}</div>)}
+      </div>
     </div>
-        </div>
   );
 };
 
