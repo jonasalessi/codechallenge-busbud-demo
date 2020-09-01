@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { register } from './autocomplete';
+import gps from './gps.png';
 
 const Average = ({ calls }) =>
   (<div className="average">
@@ -15,14 +16,14 @@ const App = () => {
   const [suggestions, setSuggestions] = useState(null);
   const [autocompleteSearchDebounced, autocompleteSearchThrottled] = register();
 
-  useEffect(() => {
+  const applyLocation = () => {
     navigator.geolocation.getCurrentPosition((position) => {
       setLocation({
         longitude: position.coords.longitude,
         latitude: position.coords.latitude,
       });
     });
-  }, []);
+  };
 
   const changeLocation = (field) => (event) => {
     setLocation({ ...location, [field]: event.target.value });
@@ -56,28 +57,33 @@ const App = () => {
           alt="Logo challenge Jonas"
         />
         <div className="App-input-container">
-          <input
-            className="App-input-search"
-            placeholder="Type some city here"
-            type="text"
-            value={query}
-            onChange={changeQuery}
-          />
-
-          <input
-            className="App-input-lat"
-            placeholder="Latitude"
-            type="text"
-            value={location.latitude}
-            onChange={changeLocation('latitude')}
-          />
-          <input
-            className="App-input-long"
-            placeholder="Longitude"
-            type="text"
-            value={location.longitude}
-            onChange={changeLocation('longitude')}
-          />
+          <div className="App-input-search">
+            <input
+              placeholder="Type some city here"
+              type="text"
+              value={query}
+              onChange={changeQuery}
+            />
+          </div>
+          <div className="App-input-lat">
+            <input
+              placeholder="Latitude"
+              type="text"
+              value={location.latitude}
+              onChange={changeLocation('latitude')}
+            />
+          </div>
+          <div className="App-input-long">
+            <input
+              placeholder="Longitude"
+              type="text"
+              value={location.longitude}
+              onChange={changeLocation('longitude')}
+            />
+          </div>
+          <div className="App-gps">
+            <img onClick={applyLocation} src={gps} alt="My Location"></img>
+          </div>
         </div>
         {suggestions?.length ?
           <ol>

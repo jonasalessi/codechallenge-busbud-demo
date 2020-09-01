@@ -43,19 +43,24 @@
 
 .App-input-container {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;    
 }
 
 .App-input-search {
-  max-width: 50%;
+  flex:10;
 }
 
 .App-input-lat {
-  max-width: 25%;
+  flex:2;
 }
 
 .App-input-long {
-  max-width: 25%;
+  flex:2;
+}
+
+.App-gps {
+  flex:1; 
+  cursor: pointer;
 }
 
 .message {
@@ -70,8 +75,7 @@ input {
   padding: 4px;
   color: rgba(0,0,0,.87);
   word-wrap: break-word;
-  outline: none;
-  display: flex;
+  outline: none; 
   flex: 100%;
   -webkit-tap-highlight-color: transparent;
   margin-top: -37px;
@@ -89,7 +93,7 @@ ol {
 li {
   cursor: pointer;
 }
-
+ 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -11,7 +11,7 @@ export const register = () => {
   }) => {
     if (query.length >= 3) {
       const time = new Date().getTime();
-      const locations = location.longitude && location.latitude
+      const locations = !isNaN(Number(location.longitude)) && !isNaN(Number(location.latitude))
         ? `&latitude=${location.latitude}&longitude=${location.longitude}`
         : '';
 
