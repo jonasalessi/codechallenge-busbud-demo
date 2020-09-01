@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0bea731c746f6d0837c676bb9697e6d4",
+    "revision": "a8c671e32b47e30f076a4339a9cd4503",
     "url": "/codechallenge-busbud-demo/index.html"
   },
   {
-    "revision": "975704f75b7186c8ca4e",
+    "revision": "37a0b95afa543a41c8c8",
     "url": "/codechallenge-busbud-demo/static/css/main.4a69ca62.chunk.css"
   },
   {
-    "revision": "6cd0fc67541ca4f43598",
-    "url": "/codechallenge-busbud-demo/static/js/2.6d61caee.chunk.js"
+    "revision": "c40c0bc84b47850ae039",
+    "url": "/codechallenge-busbud-demo/static/js/2.b445b8e5.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/codechallenge-busbud-demo/static/js/2.6d61caee.chunk.js.LICENSE.txt"
+    "url": "/codechallenge-busbud-demo/static/js/2.b445b8e5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "975704f75b7186c8ca4e",
-    "url": "/codechallenge-busbud-demo/static/js/main.869f6219.chunk.js"
+    "revision": "37a0b95afa543a41c8c8",
+    "url": "/codechallenge-busbud-demo/static/js/main.4c01ac51.chunk.js"
   },
   {
     "revision": "d5a425f99c7216c6a693",
